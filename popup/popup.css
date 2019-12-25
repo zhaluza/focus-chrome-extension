@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Roboto Slab', serif;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  background: rgb(255, 137, 137);
+  width: 30%;
+}
+
+main {
+  margin: 0 20vw;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+@media (max-width: 800px) {
+  main,
+  header {
+    margin: 0 5vw;
+  }
+
+  header {
+    margin-bottom: 5vh;
+  }
+  h3 {
+    width: 50%;
+  }
+}
