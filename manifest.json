@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Focus",
   "version": "1.0",
-  "description": "A Chrome app to help you stay off the YouTubes.",
+  "description": "A Chrome app to help you stay off YouTube, Facebook, and Reddit.",
   "content_scripts": [
     {
       "matches": [
@@ -11,7 +11,8 @@
         "https://www.reddit.com/*",
         "https://www.twitter.com/*"
       ],
-      "js": ["./main.js"]
+      "js": ["jquery-3.4.1.min.js", "./main.js"],
+      "css": ["styles.css"]
     }
   ],
   "page_action": {

@@ -1,23 +1,33 @@
+// Make a single div with both elements inside
+
 // YouTube
-const ytContent = document.getElementById('contents');
+var ytContent = $('#content');
+var ytRemove = $('#page-manager');
 if (ytContent) {
-  ytContent.parentNode.removeChild(ytContent);
+  ytRemove.remove();
+  ytContent.append(
+    '<div class="center-div"><p class="center text">Get to work!</p><img class="cat-pic" src="https://images.unsplash.com/photo-1482066490729-6f26115b60dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="an adorable cat" /></div>'
+  );
 }
 
-// FaceBook
-const fbContent = document.getElementById('contentArea');
+// Facebook
+var fbContent = $('#contentArea');
+var fbParent = fbContent.parent();
+var fbAds = $('#pagelet_ego_pane');
 if (fbContent) {
-  fbContent.parentNode.removeChild(fbContent);
+  fbParent.append(
+    '<div class="center-div"><p class="center text">Get to work!</p><img class="cat-pic" src="https://images.unsplash.com/photo-1482066490729-6f26115b60dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="an adorable cat" /></div>'
+  );
+  fbContent.remove();
+  fbAds.remove();
 }
 
 // Reddit
-const rdContent = document.getElementById('2x-container');
+var rdContent = $('#2x-container');
+var rdParent = rdContent.parent();
 if (rdContent) {
-  rdContent.parentNode.removeChild(rdContent);
-}
-
-// Twitter - currently not working
-const twContent = document.getElementById('react-root');
-if (twContent) {
-  twContent.parentNode.removeChild(twContent);
+  rdParent.append(
+    '<div class="center-div"><p class="center text">Get to work!</p><img class="cat-pic" src="https://images.unsplash.com/photo-1482066490729-6f26115b60dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="an adorable cat" /></div>'
+  );
+  rdContent.remove();
 }
